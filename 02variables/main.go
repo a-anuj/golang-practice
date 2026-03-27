@@ -14,4 +14,8 @@ func main() {
 	var smallVal uint8 = 255
 	fmt.Println(smallVal)
 	fmt.Printf("Variable is of the type : %T\n", smallVal)
+
+	var smallFloat float64 = 255.98732648736422736478253467253445372654762354
+	fmt.Println(smallFloat)
+	fmt.Printf("Variable is of the type : %T\n", smallFloat)
 }
