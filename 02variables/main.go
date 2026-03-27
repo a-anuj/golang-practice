@@ -18,4 +18,14 @@ func main() {
 	var smallFloat float64 = 255.98732648736422736478253467253445372654762354
 	fmt.Println(smallFloat)
 	fmt.Printf("Variable is of the type : %T\n", smallFloat)
+
+	var aliasVariable int
+	fmt.Println(aliasVariable)
+	fmt.Printf("Variable is of the type : %T\n", aliasVariable)
+
+	// No var keyword
+	fmt.Println("---------------------------------------------------")
+
+	temp := 7
+	fmt.Printf("My lucky number is %d\n", temp)
 }
