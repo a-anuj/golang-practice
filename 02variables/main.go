@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+const name string = "Hello"
+
 func main() {
 	var username string = "Anuj"
 	fmt.Println(username)
@@ -28,4 +30,6 @@ func main() {
 
 	temp := 7
 	fmt.Printf("My lucky number is %d\n", temp)
+
+	fmt.Printf("My name is %s\n", name)
 }
