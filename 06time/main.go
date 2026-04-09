@@ -9,4 +9,6 @@ func main() {
 	fmt.Println("Study on time package by go...")
 	presentTime := time.Now()
 	fmt.Println("Current time :", presentTime)
+	fmt.Println("After formatting :\n")
+	fmt.Println(presentTime.Format("02-01-2006 15:04:05 Monday"))
 }
