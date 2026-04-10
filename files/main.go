@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"io"
+	"os"
+)
+
+func handleError(err error) {
+	if err != nil {
+		panic(err)
+	}
+}
+
+func main() {
+	fmt.Println("Gonna write 'Hi' to the file....")
+	file, err := os.Create("test.txt")
+	handleError(err)
+	content := "HEllo"
+	length, err := io.WriteString(file, content)
+	handleError(err)
+
+	fmt.Println("Total Length written is :", length)
+	defer file.Close()
+}
