@@ -5,6 +5,18 @@ import (
 	"net/http"
 )
 
+func formHandler(w http.ResponseWriter, r *http.Request) {
+	err := r.ParseForm()
+	if err != nil {
+		panic(err)
+	}
+	name := r.FormValue("name")
+	address := r.FormValue("address")
+
+	fmt.Fprintf(w, "Welcome %s\n", name)
+	fmt.Fprintf(w, "You address is %s\n", address)
+}
+
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/hello" {
 		http.Error(w, "404 Page Not Found", http.StatusNotFound)
